@@ -1,0 +1,12 @@
+1. Run getklines.py for each session → mark the entry → save file
+   (repeat 20-30 times across different days)
+2. Dump ALL .txt files into Claude Code with this prompt:
+   "These are BTCUSDT 1m trading sessions.
+    is_entry=1 marks the exact candle I pulled the trigger on.
+    Look at all is_entry=1 rows across all files.
+    What combination of columns consistently describes that moment
+    compared to is_entry=0 rows?"
+3. Claude Code will tell you something like:
+   "At entry: e10_vs_e20 > 5, ha_bull=1, ha_strong=1,
+    ha5m_bull=1, pd_zone >= 3, e10_slp > 0"
+4. That IS your rule — codified.
